@@ -10,7 +10,6 @@ function App() {
       title: "ساخت اولین پروژه رزومه‌ای با پایتون: قدم‌به‌قدم تا موفقیت",
       author: "سعیدی‌راد",
       img: "/images/clay-banks-cReV-cbE2L4-unsplash.jpg",
-
     },
     {
       title: "ساخت اولین پروژه رزومه‌ای با React: قدم‌به‌قدم تا موفقیت",
@@ -86,14 +85,10 @@ function App() {
           </div>
 
           <div id="items" className="container">
-            <Article {...articles[0]} />
-            <Article {...articles[1]} />
-            <Article {...articles[2]} />
-            <Article {...articles[3]} />
-            <Article {...articles[4]} />
-            <Article {...articles[5]} />
-            <Article {...articles[6]} />
-            <Article {...articles[7]} />
+
+            {articles.map((item, index) => (
+              <Article {...item}/>
+            ))}
           </div>
         </section>
       </main>
